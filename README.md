@@ -1,3 +1,5 @@
+> Building technology is as much about engineering as it is about people :people_holding_hands:
+
 ### Your (mostly) friendly :feet: neighbourhood data person
 
 Interested in anything data or "mathy" :chart: :upside_down_face:
