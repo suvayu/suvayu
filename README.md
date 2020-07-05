@@ -1,4 +1,4 @@
-### Your (mostly) friendly neighbourhood data person
+### Your (mostly) friendly :feet: neighbourhood data person
 
 Interested in anything data or "mathy" :chart: :upside_down_face:
 
