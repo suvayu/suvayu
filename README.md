@@ -1,4 +1,4 @@
-> Building technology :artificial_satellite: is as much about engineering as it is about people :people_holding_hands:
+> Building technological solutions :artificial_satellite: is as much about engineering as it is about people :people_holding_hands:
 
 ### Your (mostly) friendly :feet: neighbourhood data person
 
