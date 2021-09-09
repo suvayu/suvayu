@@ -6,11 +6,11 @@ Interested in anything data or "mathy" :chart: :upside_down_face:
 
 #### GNU/Linux nerd :penguin:
 
-- fiddle w/ internals, love reading manuals (I know, it's a bit weird)
-- hardware: Arduino, RPi, RISC-V
-- security: encryption, privacy
-- HPC
 - FOSS advocate
+- fiddle w/ internals, love reading manuals (I know, it's a bit weird)
+- hardware: Arduino, RPi, RISC-V (wish list)
+- High Performance Computing
+- privacy
 
 ***Always a Physicist*** :atom:
 
