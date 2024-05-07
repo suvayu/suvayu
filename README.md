@@ -7,9 +7,11 @@ Interested in anything data or "mathy" :chart: :upside_down_face:
 #### GNU/Linux nerd :penguin:
 
 - FOSS advocate
-- explore Linux internals, reading manuals (I know, it's a bit weird)
-- hardware: Arduino, RPi, RISC-V (wish list)
+- Scientific/research software
 - High Performance Computing
+- explore Linux internals, reading manuals (I know, it's a bit weird)
+- try different programming languages, and programming paradigms
+- hardware: Arduino, RPi, RISC-V (wish list)
 - privacy
 
 ***Always a Physicist*** :atom:
