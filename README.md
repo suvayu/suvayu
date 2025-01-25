@@ -9,10 +9,11 @@ Interested in anything data or "mathy" :chart: :upside_down_face:
 - FOSS advocate
 - Scientific/research software
 - High Performance Computing
-- explore Linux internals, reading manuals (I know, it's a bit weird)
-- try different programming languages, and programming paradigms
-- hardware: Arduino, RPi, RISC-V (wish list)
-- privacy
+- Like exploring Linux internals, reading manuals (I know, it's a bit weird)
+- Curious about different programming languages, and programming paradigms
+- Somewhat obsessed with software testing
+- Curious about hardware: Arduino, RPi, RISC-V (wish list)
+- Interested in privacy tech 
 
 ***Always a Physicist*** :atom:
 
