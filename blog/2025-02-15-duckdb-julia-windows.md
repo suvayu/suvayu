@@ -9,9 +9,8 @@ author: Suvayu Ali
 
 # A debugging journey into the unknown
 
-<details><summary>!!Spoiler!!</summary>
-The story isn't complete.  There will be a concluding part when I actually fix the problem.
-</details>
+> [!NOTE]
+> The story isn't complete.  There will be a concluding part when I actually fix the problem.
 
 It all started with a colleague trying to update their Julia
 environment for one of our projects[^1].  They could not update
