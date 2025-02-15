@@ -16,8 +16,8 @@ It all started with a colleague trying to update their Julia
 environment for one of our projects[^1].  They could not update
 because a dependency, the Julia bindings for DuckDB, was failing to
 compile!  For the moment we decided to deal with it later, and pinned
-`DuckDB.jl` to the working version.  We also filed an [issue
-upstream](https://github.com/duckdb/duckdb/issues/13911).
+`DuckDB.jl` to the working version.  We also filed an issue upstream:
+[duckdb/duckdb#13911](https://github.com/duckdb/duckdb/issues/13911).
 
 Since there was no significant progress on the issue for a few months,
 I decided to dive in once and for all - this is that story.
