@@ -659,11 +659,11 @@ the issue.  Let us try to find that :slightly_smiling_face:.
 ## Hunt for the first "bad" commit
 
 To be able to find the first bad commit, we need to be able to compile
-the library.  Julia has a whole infrastructure called
+the library.  Julia has a whole other infrastructure called
 [`BinaryBuilder`](https://binarybuilder.org/).  It cross-compiles
 native binaries for all platforms on Linux.  This is a whole another
-rabbit hole, and lets shelve this for another time.  The only relevant
-bit is, the builds are done *only* on Linux.  This presents a
+rabbit hole, and let us shelve this for another time.  The only
+relevant bit is, the builds are done *only* on Linux.  This presents a
 different problem, `dumpbin.exe`, the tool to check if the symbol
 export is correct is available only on Windows.  If we are to find the
 bad commit, we need to automate the build & check steps and run it
@@ -762,11 +762,11 @@ and used a wide variety of tools to investigate.
 To summarise, we learnt:
 1. Windows has a separate mechanism to export symbol names in its
    shared libraries (DLL).
-2. We learned about tools to inspect symbols in native libraries;
+2. We learnt about tools to inspect symbols in native libraries;
    namely `nm`, `dumpbin.exe`, and `winedump`.
-3. We learned about the Julia build system for native libraries (a
+3. We learnt about the Julia build system for native libraries (a
    topic for a future post).
-4. We learned to write a script what we can use with `git-bisect` to
+4. We learnt to write a script that we can use with `git-bisect` to
    run automatic bisections (a potential topic for a future post).
 
 
