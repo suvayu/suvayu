@@ -138,8 +138,11 @@ correctly, we should check if they are indeed exported.  After some
 searching, I learnt Windows development tools includes the program
 `dumpbin.exe` that can show the exported symbol names.
 
-<details><summary>Exported symbols for the working version of `libduckdb.dll`</summary>
+<details><summary>Exported symbols for the working version of <code>libduckdb.dll</code></summary>
+
+```pwsh
 > dumpbin.exe /EXPORTS .\bin\libduckdb.dll
+
 Microsoft (R) COFF/PE Dumper Version 14.42.34435.0
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
@@ -516,9 +519,12 @@ File Type: DLL
      17E1000 .text
         1000 .tls
       17E000 .xdata
+```
 </details>
 
-<details><summary>Exported symbols for a faulty version of `libduckdb.dll`</summary>
+<details><summary>Exported symbols for a faulty version of <code>libduckdb.dll</code></summary>
+
+```pwsh
 > dumpbin.exe /EXPORTS .\bin\libduckdb.dll
 Microsoft (R) COFF/PE Dumper Version 14.42.34435.0
 Copyright (C) Microsoft Corporation.  All rights reserved.
@@ -642,6 +648,7 @@ File Type: DLL
      19EB000 .text
         1000 .tls
       197000 .xdata
+```
 </details>
 
 So it is confirmed that the symbol export is not working for the
@@ -735,9 +742,9 @@ commit, like this:
 $ git bisect start
 $ git bisect bad v1.1.2
 $ git bisect good v1.0.0
-$ git bisect run ./bisect-script.bash 
+$ git bisect run ./bisect-script.bash
 $ git bisect visualize # shows a nice summary
-$ git bisect reset 
+$ git bisect reset
 
 ```
 
@@ -761,7 +768,6 @@ To summarise, we learnt:
 4. We learned to write a script what we can use with `git-bisect` to
    run automatic bisections (a potential topic for a future post).
 
----
 
 [^1]: [Tulipa](https://github.com/TulipaEnergy)
 [^2]: [Name mangling](https://en.wikipedia.org/wiki/Name_mangling)
