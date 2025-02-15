@@ -747,7 +747,7 @@ $ git bisect reset
 
 ```
 
-This led me to this commit:
+The bisection led me to this commit:
 [d1ea1538](https://github.com/duckdb/duckdb/commit/d1ea1538c9217fb536485f1500f04a0b55b1e584).
 Unfortunately it is not clear how that commit would lead to symbol
 export failure, it only adds 11 new functions to the C-API (so 11 new
