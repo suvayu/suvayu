@@ -18,3 +18,13 @@ Interested in anything data or "mathy" :chart: :upside_down_face:
 ***Always a Physicist*** :atom:
 
 *Sometimes a cyclist* :bicyclist:
+
+
+### `/dev/log/random`
+
+I just started writing about my development journeys.  Hoping to be
+somewhat regular.
+
+- [2025-02-15] [A debugging journey into the
+  unknown](./blog/2025-02-15-duckdb-julia-windows.md): debugging build
+  failure of `DuckDB.jl` on Windows.
