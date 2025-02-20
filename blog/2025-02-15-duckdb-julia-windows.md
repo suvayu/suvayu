@@ -759,7 +759,13 @@ and used a wide variety of tools to investigate.
 
 ## What did we learn?
 
-To summarise, we learnt:
+To summarise, the issue is:
+1. All releases of `DuckDB.jl` after `v1.0.0` on Windows are broken.
+2. We recreate the issue without Julia, which shows the the DuckDB
+   build using the MingW-w64 toolchain is broken for all releases
+   after `v1.0.0`.
+
+And in the process of debugging this, we learnt:
 1. Windows has a separate mechanism to export symbol names in its
    shared libraries (DLL).
 2. We learnt about tools to inspect symbols in native libraries;
