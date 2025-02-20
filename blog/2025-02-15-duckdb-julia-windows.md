@@ -5,7 +5,7 @@ tags: Windows, DLL, DuckDB, MingW, cross-compilation, git-bisect, Julia, BinaryB
 author: Suvayu Ali
 ---
 
-*NOTE*: I have not written a blog in many years, so apologies if my writing is not clear.
+![Among the Stars; Credit: NASA/JPL-Caltech](./2025-02-15-pia17049-hires-cropped.jpg "Among the Stars; an artist's concept of Voyager in deep space")
 
 # A debugging journey into the unknown
 
@@ -775,6 +775,8 @@ And in the process of debugging this, we learnt:
 4. We learnt to write a script that we can use with `git-bisect` to
    run automatic bisections (a potential topic for a future post).
 
+
+*Image Credit: [NASA/JPL-Caltech](https://science.nasa.gov/image-detail/pia17049-hires/)*
 
 [^1]: [Tulipa](https://github.com/TulipaEnergy)
 [^2]: [Name mangling](https://en.wikipedia.org/wiki/Name_mangling)
