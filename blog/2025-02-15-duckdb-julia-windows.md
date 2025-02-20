@@ -675,7 +675,7 @@ So I went searching again for an alternative.  Unsurprisingly, Wine
 [`winedump`](https://gitlab.winehq.org/wine/wine/-/wikis/Man-Pages/winedump),
 which is an equivalent to the Windows tool `dumpbin.exe`.
 
-To build with Windows DLL, we need to cross-compile DuckDB on Linux
+To build the Windows DLL, we need to cross-compile DuckDB on Linux
 using the MingW-w64 toolchain.  Combined with the `winedump` tool, I
 wrote the following script that we can use to test a successful build.
 
@@ -713,8 +713,10 @@ else
 fi
 ```
 
-Note that the build command uses the following toolchain file (thanks
-to this
+The script builds DuckDB, and checks whether the generated DLL file
+export the C-API symbols correctly.  It also handles a few corner
+cases of build failures.  Note that the build command uses the
+following toolchain file (thanks to this
 [gist](https://gist.github.com/peterspackman/8cf73f7f12ba270aa8192d6911972fe8/)).
 
 ```cmake
