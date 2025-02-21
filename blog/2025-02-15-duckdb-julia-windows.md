@@ -74,9 +74,9 @@ visible to Julia?*
 
 My first hurdle was to find a way to get both versions of the library
 and compare.  I decided to install different versions of the native
-library in different directories; after loading the library, the
-`libduckdb` variable would point to the correct path.  We can then use
-other tools to inspect the [dynamic-link
+library `DuckDB_jll` in different directories; after loading the
+library, the `libduckdb` variable would point to the correct path.  We
+can then use other tools to inspect the [dynamic-link
 libraries](https://en.wikipedia.org/wiki/Dynamic-link_library) (DLLs)
 and check if the symbols actually exist.  If we can compare the
 working version of the native library with a version that does not
