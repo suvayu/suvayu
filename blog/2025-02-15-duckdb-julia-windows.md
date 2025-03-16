@@ -5,7 +5,7 @@ tags: Windows, DLL, DuckDB, MingW, cross-compilation, git-bisect, Julia, BinaryB
 author: Suvayu Ali
 ---
 
-![Among the Stars; Credit: NASA/JPL-Caltech](./2025-02-15-pia17049-hires-cropped.jpg "Among the Stars; an artist's concept of Voyager in deep space")
+![Among the Stars; Credit: NASA/JPL-Caltech](./assets/2025-02-15-pia17049-hires-cropped.jpg "Among the Stars; an artist's concept of Voyager in deep space")
 
 # A debugging journey into the unknown
 
