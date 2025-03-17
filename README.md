@@ -25,8 +25,8 @@ Interested in anything data or "mathy" :chart: :upside_down_face:
 I just started writing about my development journeys.  Hoping to be
 somewhat regular.
 
-- [2025-03-16] [Solving the mystery of the missing symbols!](./blog/2025-03-16-duckdb-mingw-inline-fn.md):
-  found the underlying problem for the build failure discussed in the previous post.
+- **[2025-03-16]** [Solving the mystery of the missing symbols!](./blog/2025-03-16-duckdb-mingw-inline-fn.md):
+  resolved the build failure discussed in the previous post.
 
-- [2025-02-15] [A debugging journey into the unknown](./blog/2025-02-15-duckdb-julia-windows.md):
+- **[2025-02-15]** [A debugging journey into the unknown](./blog/2025-02-15-duckdb-julia-windows.md):
   debugging build failure of `DuckDB.jl` on Windows.
