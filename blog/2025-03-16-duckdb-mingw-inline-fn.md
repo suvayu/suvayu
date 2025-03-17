@@ -1,11 +1,9 @@
 ---
 title: Solving the mystery of the missing symbols!
 date: 2025-03-16
-tags: Windows, DuckDB, MingW
+tags: Windows, DuckDB, MingW, macro-hygiene
 author: Suvayu Ali
 ---
-
-![Among the Stars; Credit: NASA/JPL-Caltech](./assets/2025-02-15-pia17049-hires-cropped.jpg "Among the Stars; an artist's concept of Voyager in deep space")
 
 # Solving the mystery of the missing symbols!
 
@@ -188,6 +186,3 @@ distinct so that they do not interfere with each other; i.e.
 1. Bisection is an incredibly effective idea that can be used in many
    different contexts.
 2. Macro hygiene is important.
-
-
-*Image Credit: [NASA/JPL-Caltech](https://science.nasa.gov/image-detail/pia17049-hires/)*
