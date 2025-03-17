@@ -10,7 +10,7 @@ author: Suvayu Ali
 # A debugging journey into the unknown
 
 > [!NOTE]
-> The story isn't complete.  There will be a concluding part when I actually fix the problem.
+> This is the first part of the story.  The concluding [part](./2025-03-16-duckdb-mingw-inline-fn.md) discusses the fix.
 
 It all started with a colleague trying to update their Julia
 environment for one of our projects[^1].  They could not update
@@ -60,7 +60,7 @@ const idx_t = UInt64 # DuckDB index type
 So we can test loading the native library like this:
 
 ```julia
-pkg] add DuckDB_jll
+pkg> add DuckDB_jll
 julia> using DuckDB_jll
 ccall((:duckdb_vector_size, libduckdb), UInt64, ())
 ```
