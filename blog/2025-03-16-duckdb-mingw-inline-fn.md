@@ -1,7 +1,7 @@
 ---
 title: Solving the mystery of the missing symbols!
 date: 2025-03-16
-tags: Windows, DuckDB, MingW, macro-hygiene
+tags: Windows, DuckDB, MingW, bisect, macro-hygiene
 author: Suvayu Ali
 ---
 
