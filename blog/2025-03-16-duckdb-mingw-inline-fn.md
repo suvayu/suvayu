@@ -30,14 +30,14 @@ build commands.  It is much easier to do this with Make than Ninja
 calling CMake as:
 
 ```bash
-cmake -G "Unix Makefiles" ...
+$ cmake -G "Unix Makefiles" ...
 ```
 
 We can then log all the build commands by starting a verbose build
 with Make:
 
 ```bash
-VERBOSE=1 make -j6 |& tee build.log
+$ VERBOSE=1 make -j6 |& tee build.log
 ```
 
 With all the build commands recorded to a log file, I searched for
@@ -45,14 +45,14 @@ commands that create the shared library `libduckdb.dll`, and narrowed
 it down to the following set of build commands:
 
 ```bash
-/usr/bin/cmake -E rm -f CMakeFiles/duckdb.dir/objects.a
-/usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/duckdb.dir/objects.a @CMakeFiles/duckdb.dir/objects1.rsp
-/usr/lib64/ccache/x86_64-w64-mingw32-g++ -O3 -DNDEBUG -O3 -DNDEBUG   -shared -o libduckdb.dll \
+$ /usr/bin/cmake -E rm -f CMakeFiles/duckdb.dir/objects.a
+$ /usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/duckdb.dir/objects.a @CMakeFiles/duckdb.dir/objects1.rsp
+$ /usr/lib64/ccache/x86_64-w64-mingw32-g++ -O3 -DNDEBUG -shared -o libduckdb.dll \
     -Wl,--out-implib,libduckdb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive \
     CMakeFiles/duckdb.dir/objects.a -Wl,--no-whole-archive @CMakeFiles/duckdb.dir/linkLibs.rsp
 ```
 
-Going through the steps individually, we will see that eventhough the
+Going through the steps individually, we will see that even though the
 symbols are present in the earlier steps, the final library creation
 step drops them.
 
@@ -88,7 +88,7 @@ $ winedump -j export CMakeFiles/duckdb.dir/objects.a | grep duckdb_vector_size
 Finally we can create the shared library by calling the linker.
 
 ```bash
-$ /usr/lib64/ccache/x86_64-w64-mingw32-g++ -O3 -DNDEBUG -O3 -DNDEBUG -shared -o libduckdb.dll \
+$ /usr/lib64/ccache/x86_64-w64-mingw32-g++ -O3 -DNDEBUG -shared -o libduckdb.dll \
     -Wl,--out-implib,libduckdb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive \
     CMakeFiles/duckdb.dir/objects.a -Wl,--no-whole-archive @CMakeFiles/duckdb.dir/linkLibs.rsp
 ```
@@ -122,7 +122,7 @@ symbols:
 I commented out parts of the above files, while ensuring the build
 still succeeds, and checking for the C-API symbols in the final DLL in
 the usual way with `nm` and `winedump`.  This led me to discover that
-the problem disappears if we reorder the include headers in
+the _problem disappears if we reorder the include headers_ in
 `src/main/capi/aggregate_function-c.cpp`.  You can see the change in
 this PR:
 [duckdb/duckdb#16396](https://github.com/duckdb/duckdb/pull/16396/files).
@@ -155,8 +155,8 @@ preprocessor macros, anything else would trigger a compilation error.
 
 ## Solution to the mystery!
 
-After further investigation from DuckDB core developer Mark, the issue
-was resolved in this PR:
+After further investigation from DuckDB core developer Mark Raasveldt,
+the issue was resolved in this PR:
 [duckdb/duckdb#13697](https://github.com/duckdb/duckdb/pull/16397).
 So what was the issue?
 
@@ -194,7 +194,7 @@ index 2cff5d12d4..65dd89975e 100644
  #else
 ```
 
-### The reason
+### The reason & the fix
 
 When exporting symbols, MingW normally excludes inline functions (see
 `man x86_64-w64-mingw32-g++` and search for
@@ -220,8 +220,9 @@ i.e.
 ## What did we learn?
 
 After this resolution, any project reliant on this build can update to
-the latest version of DuckDB.  In our case that is the Julia binding
-for DuckDB, `DuckDB.jl`.  If we look at the original issue:
+the latest version of DuckDB starting from version 1.2.1.  In our case
+that is the Julia binding for DuckDB, `DuckDB.jl`.  If we look at the
+original issue:
 [duckdb/duckdb#13911](https://github.com/duckdb/duckdb/issues/13911),
 there are many different projects reliant on it, so the impact of this
 fix is quite broad!
