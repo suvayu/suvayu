@@ -10,7 +10,7 @@ author: Suvayu Ali
 > [!NOTE]
 >
 > This is the conclusion to the story I [wrote
-> about](./2025-03-16-duckdb-mingw-inline-fn.md) earlier.
+> about](./2025-02-15-duckdb-julia-windows.md) earlier.
 
 In the earlier post, we were investigating why the MingW-w64 build of
 DuckDB fails to export the C-API symbols in the final DLL.  We
